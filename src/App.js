@@ -3,24 +3,7 @@ import "./App.css";
 import GoogleMapReact from "google-map-react";
 import MyGreatPlaceWithHover from "./mygreatplacehover";
 import { K_SIZE } from "./my_great_place_with_hover_styles.js";
-
-const AnyReactComponent = ({ text }) => (
-  <div
-    style={{
-      color: "white",
-      background: "red",
-      padding: "5px 5px",
-      display: "inline-flex",
-      textAlign: "center",
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: "10%",
-      transform: "translate(-5%, -5%)"
-    }}
-  >
-    {text}
-  </div>
-);
+import LinkFunction from"./LinkFunction"
 
 class App extends Component {
   static defaultProps = {
@@ -41,24 +24,16 @@ class App extends Component {
           defaultZoom={this.props.zoom}
           hoverDistance={K_SIZE / 2}
         >
-          {/* <AnyReactComponent
+         <LinkFunction/>
+          
+          {/* <MyGreatPlaceWithHover
             lat={1.28351}
             lng={103.846797}
-            text={"ThoughtWorks SG"}
+            text={"A"} 
           /> */}
-          <AnyReactComponent
-            lat={1.284}
-            lng={103.8609}
-            text={"Marina Bay Sands"}
-          />
-          <MyGreatPlaceWithHover
-            lat={1.28351}
-            lng={103.846797}
-            text={"A"} /* Kreyser Avrora */
-          />
           <MyGreatPlaceWithHover
             {...this.props.greatPlaceCoords}
-            text={"B"} /* road circle */
+            text={"B"} 
           />
         </GoogleMapReact>
       </div>
