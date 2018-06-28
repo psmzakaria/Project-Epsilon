@@ -23,6 +23,34 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Marker {
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  transform: translate(-50%, -100%);
+  /* background: red; */
+  background-image: url("./marker1.png")
+}
+
+.MarkerDes {
+  height: 30px;
+  width: 55px;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: white;
+  background: rgba(34, 34, 34, 0.712);
+  padding:10px;
+  border: 5px solid tomato;
+  border-radius: 15px;
+  
 }

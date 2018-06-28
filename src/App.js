@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import GoogleMapReact from "google-map-react";
-import MyGreatPlaceWithHover from "./mygreatplacehover";
+
 import { K_SIZE } from "./my_great_place_with_hover_styles.js";
-import LinkFunction from"./LinkFunction"
+import LinkFunction from "./LinkFunction";
+import LinkFunction2 from "./LinkFunction2";
 
 const locations = [
   {
@@ -60,16 +61,22 @@ const locations = [
   }
 ];
 
-
-
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      buildings: []
+    };
+  }
   static defaultProps = {
     center: {
-      lat: 1.29027,
+      lat: 1.366,
       lng: 103.851959
     },
-    zoom: 15
+    zoom: 12.20
   };
+
+  tis;
 
   render() {
     return (
@@ -81,17 +88,24 @@ class App extends Component {
           defaultZoom={this.props.zoom}
           hoverDistance={K_SIZE / 2}
         >
-         <LinkFunction locations = {locations}/>
-          
-          {/* <MyGreatPlaceWithHover
-            lat={1.28351}
-            lng={103.846797}
-            text={"A"} 
-          /> */}
-          <MyGreatPlaceWithHover
-            {...this.props.greatPlaceCoords}
-            text={"B"} 
-          />
+          {locations.map(building => {
+            return (
+              <LinkFunction
+                // locations={locations}
+                lat={building.lat.split(",")[0]}
+                lng={building.coordinates}
+              />
+            );
+          })}
+          {locations.map(building => {
+            return (
+              <LinkFunction2
+                lat={building.lat.split(",")[0]}
+                lng={building.coordinates}
+                text={building.text}
+              />
+            );
+          })}
         </GoogleMapReact>
       </div>
     );
