@@ -1,8 +1,9 @@
 import React from "react";
-
+import ControlledCarousel from "./ConCarousel"
 const HomePage = () => (
   <div>
-    <p>
+   <ControlledCarousel/>
+    <p className="Home1">
       E-waste is discarded electronics that, when improperly disposed, have the
       potential of harming our ecosystem.E-waste encompasses a long list of
       devices.Since you can’t just put these objects in the regular trash, we
@@ -14,7 +15,7 @@ const HomePage = () => (
       equipment ​while minimizing any risk of information or identity theft.We
       aim to provide the required information for optimized recycling.
     </p>
-    <p>
+    <p className="Home2">
       E-waste is growing, and with that surge comes the need for effective
       electronics recycling programs.People are urgently looking for information
       on TV recycling, computer recycling, and other programs that will help

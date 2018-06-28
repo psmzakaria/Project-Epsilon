@@ -77,7 +77,7 @@ class GoogleMap extends Component {
   render() {
     return (
       <div className="Body">
-        <div style={{ height: "80vh", width: "100%" }}>
+        <div style={{ height: "100vh", width: "100%" }}>
           <GoogleMapReact
             bootstrapURLKeys={{
               key: "AIzaSyAn5Nt8e_rYahYmraxZSc5quaS0h4RfNwI"

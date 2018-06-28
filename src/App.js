@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import Head from "./Head";
-import Panel from "./Panel";
+import ControlledCarousel from "./ConCarousel"
 import Contact from "./Contact";
 import Home from "./Home";
 import RecycleEwaste from "./Recycleable";
-import GoogleMap from "./GoogleMap"
+import GoogleMap from "./GoogleMap";
 
 class App extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class App extends Component {
       componentToDisplay: null
     };
   }
- 
+
   loadComponent = componentName => {
     this.setState({
       componentToDisplay: componentName
@@ -24,12 +24,13 @@ class App extends Component {
     return (
       <div className="Body">
         <Head loadComponent={this.loadComponent} />
-        {this.state.componentToDisplay === "component1" && <GoogleMap />}
+        {this.state.componentToDisplay === "component1" && <Home />}
         {this.state.componentToDisplay === "component2" && <RecycleEwaste />}
-
-        
+        {this.state.componentToDisplay === "component3" && <RecycleEwaste />}
+        {this.state.componentToDisplay === "component4" && <GoogleMap />}
+        {this.state.componentToDisplay === "component5" && <Contact />}
+        {this.state.componentToDisplay === "component6" && <GoogleMap />}
       </div>
-      // Important! Always set the container height explicitly
     );
   }
 }

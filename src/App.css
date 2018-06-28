@@ -47,25 +47,85 @@
 }
 
 .MarkerDes:hover {
-  height: 30px;
-  width: 55px;
+  width: 75px;
+  word-wrap: break-word;
   transform: translate(-50%, 0%);
-  text-align: center;
   color: white;
   background: rgba(34, 34, 34, 0.712);
-  padding: 10px;
+  padding: 5px;
   border: 5px solid tomato;
   border-radius: 15px;
 }
-.Body{
-font-display: white;
-  background: url("./350851-download-free-website-background-1920x1080-for-mobile-hd.jpg");
-  height:100vh;
-}
-.Contact{
-  color:whitesmoke;  
-}
-.NavbarDef{
 
-  background:paleturquoise;
+.Body {
+  font-display: white;
+  background: url("./350851-download-free-website-background-1920x1080-for-mobile-hd.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Contact {
+  color: whitesmoke;
+  font-family: 'Allerta Stencil';
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: rgb(54, 12, 10);
+  }
+}
+
+.NavbarDef {
+  background: paleturquoise;
+}
+
+.Button1 {
+  transform: translate(0%, 20%);
+}
+
+.Home1, .Home2 {
+  font-family: 'Allerta Stencil';
+  font-size: 18px;
+  color: seashell;
+  height: full;
+  padding: 10px;
+  ;
+}
+
+.carousel-image {
+  margin: 0 auto;
+  height: 280px;
+}
+
+.carousel-caption {
+  color: black;
+  height: 250px;
+}
+
+.contact-image {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.contact-text {
+  font-size: 25px;
+}
+
+.Recycleable {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 0px;
 }
