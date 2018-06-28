@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
 import GoogleMapReact from "google-map-react";
+import Head from "./Head";
+import ControlledCarousel from "./ConCaroseull";
+import Panel from "./Slide2";
+import Contact from "./Contact";
+import Home from "./Home";
+import RecycleEwaste from "./Recycleable";
 
 import { K_SIZE } from "./my_great_place_with_hover_styles.js";
 import LinkFunction from "./LinkFunction";
@@ -73,7 +79,7 @@ class App extends Component {
       lat: 1.366,
       lng: 103.851959
     },
-    zoom: 12.20
+    zoom: 12.2
   };
 
   tis;
@@ -81,7 +87,14 @@ class App extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: "100vh", width: "100%" }}>
+      <div style={{ height: "10vh", width: "10%" }}>
+        <Head />
+        <ControlledCarousel />
+        <Panel />
+        <Contact />
+        <Home />
+        <RecycleEwaste />
+
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAn5Nt8e_rYahYmraxZSc5quaS0h4RfNwI" }}
           defaultCenter={this.props.center}
