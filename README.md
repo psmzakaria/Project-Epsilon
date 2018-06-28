@@ -2442,3 +2442,134 @@ In the future, we might start automatically compiling incompatible third-party m
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+<!-- import React, { Component } from "react";
+import "./App.css";
+import GoogleMapReact from "google-map-react";
+import Head from "./Head";
+// import ControlledCarousel from "./ConCaroseull";
+import Panel from "./Panel";
+import Contact from "./Contact";
+import Home from "./Home";
+import RecycleEwaste from "./Recycleable";
+
+import { K_SIZE } from "./my_great_place_with_hover_styles.js";
+import LinkFunction from "./LinkFunction";
+import LinkFunction2 from "./LinkFunction2";
+
+const locations = [
+  {
+    text: "Nee Soon East CC",
+    coordinates: "103.838488085342",
+    lat: "1.43102086669869,0.0"
+  },
+  {
+    text: "Eightrium@Changi business park",
+    coordinates: "103.96446974864",
+    lat: "1.3378750719199,0.0"
+  },
+  {
+    text: "Environment Building (MEWR/NEA)",
+    coordinates: "103.836104057868",
+    lat: "1.31056745981661,0.0"
+  },
+
+  {
+    text: "Eunos Primary School",
+    coordinates: "103.904374791381",
+    lat: "1.32438836308906,0.0"
+  },
+
+  {
+    text: "Expedia Singapore Pte Ltd",
+    coordinates: "103.854068348619",
+    lat: "1.29509741694824,0.0"
+  },
+  {
+    text: "Faber Crest Condominium",
+    coordinates: "103.757074767054",
+    lat: "1.32339071639709,0.0"
+  },
+  {
+    text: "Fairfield Methodist Secondary School",
+    coordinates: "103.78409964802",
+    lat: "1.30163375037438,0.0"
+  },
+  {
+    text: "Fernvale Gardens School",
+    coordinates: "103.874903926607",
+    lat: "1.38936625399677,0.0"
+  },
+  {
+    text: "Fisher Clinical Services (Thermofisher Scientific)",
+    coordinates: "103.748074842117",
+    lat: "1.33225990235709"
+  },
+  {
+    text: "Fuchun CC",
+    coordinates: "103.774811861357",
+    lat: "1.42952981467428"
+  }
+];
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      buildings: [],
+      componentToDisplay: null
+    };
+  }
+  static defaultProps = {
+    center: {
+      lat: 1.366,
+      lng: 103.851959
+    },
+    zoom: 12
+  };
+  loadComponent = componentName => {
+    this.setState({
+      componentToDisplay: componentName
+    });
+  };
+  render() {
+    return (
+      <div className="Body">
+        <Head loadComponent={this.loadComponent} />
+        {this.state.componentToDisplay === "component1" && <Contact />}
+        {this.state.componentToDisplay === "component2" && <RecycleEwaste />}
+       
+        <div style={{ height: "80vh", width: "100%" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: "AIzaSyAn5Nt8e_rYahYmraxZSc5quaS0h4RfNwI"
+            }}
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+            hoverDistance={K_SIZE / 2}
+          >
+            {locations.map(building => {
+              return (
+                <LinkFunction
+                  lat={building.lat.split(",")[0]}
+                  lng={building.coordinates}
+                />
+              );
+            })}
+            {locations.map(building => {
+              return (
+                <LinkFunction2
+                  lat={building.lat.split(",")[0]}
+                  lng={building.coordinates}
+                  text={building.text}
+                />
+              );
+            })}
+          </GoogleMapReact>
+        </div>
+      </div>
+      // Important! Always set the container height explicitly
+    );
+  }
+}
+
+export default App; -->

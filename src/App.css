@@ -57,3 +57,15 @@
   border: 5px solid tomato;
   border-radius: 15px;
 }
+.Body{
+font-display: white;
+  background: url("./350851-download-free-website-background-1920x1080-for-mobile-hd.jpg");
+  height:100vh;
+}
+.Contact{
+  color:whitesmoke;  
+}
+.NavbarDef{
+
+  background:paleturquoise;
+}
